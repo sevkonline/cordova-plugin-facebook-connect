@@ -13,12 +13,15 @@
 #import <FBSDKCoreKit/FBSDKCoreKit.h>
 #import <FBSDKLoginKit/FBSDKLoginKit.h>
 #import <FBSDKShareKit/FBSDKShareKit.h>
+#import <FBSDKGamingServicesKit/FBSDKGamingServicesKit-Swift.h>
 #import <Cordova/CDV.h>
 #import "AppDelegate.h"
 
 @interface FacebookConnectPlugin : CDVPlugin <FBSDKSharingDelegate, FBSDKGameRequestDialogDelegate>
 - (void)getApplicationId:(CDVInvokedUrlCommand *)command;
 - (void)setApplicationId:(CDVInvokedUrlCommand *)command;
+- (void)getClientToken:(CDVInvokedUrlCommand *)command;
+- (void)setClientToken:(CDVInvokedUrlCommand *)command;
 - (void)getApplicationName:(CDVInvokedUrlCommand *)command;
 - (void)setApplicationName:(CDVInvokedUrlCommand *)command;
 - (void)getLoginStatus:(CDVInvokedUrlCommand *)command;
